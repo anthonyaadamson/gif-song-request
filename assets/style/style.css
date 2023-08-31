@@ -1,6 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* color: rgb(255, 209, 153); */
+}
+
 body {
     background-image: url("../img/simon-noh-0rmby-3OTeI-unsplash.jpg");
     background-size: cover;
-    background-blend-mode: lighten;
     background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
 }
