@@ -7,3 +7,10 @@ function searchInput(event) {
     console.log(search);
   }
   searchBtn.addEventListener("click", searchInput);
+
+  function searchBtn(event) {
+    event.preventDefault();
+    var search = searchBtn.value;
+    console.log(search);
+  }
+  
