@@ -1,6 +1,10 @@
 var searchEl = document.querySelector('#searchInput');
 var searchBtn = document.querySelector('#searchBtn');
+var gifContainerEl = document.querySelector('#gifContainer')
+
 var searchResult = '';
+
+
 function searchInput(event) {
     event.preventDefault();
     var searchResult = searchEl.value;
@@ -19,6 +23,10 @@ function getGiphyApi(searchResult) {
       .then(function (data) {
         console.log(data);
         var image = data.data[0].url;
+
+        var gif = document.createElement('iframe');
+        gif.src = data.data[0].embed_url;
+        gifContainerEl.append(gif)
     
         console.log(image)
       });
