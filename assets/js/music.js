@@ -12,7 +12,7 @@ function searchInput(event) {
       getMusicApi(searchResult);
     }
 };
-function getMusicApi(searchreult); {
+function getMusicApi(searchreult) {
     var apiKey = '0f99adf35f5007a56997d29bd724ab23';
 
 }
