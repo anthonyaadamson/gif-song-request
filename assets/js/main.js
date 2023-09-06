@@ -45,6 +45,21 @@ async function fetchDictionary(searchResult) {
   console.log(wordDefintion)
 
   defintionEl.textContent = wordDefintion;
+}
+
+  async function fetchMusicMatchTrack(commontrack_id) {
+    var MUSIC_API_KEY = '	0f99adf35f5007a56997d29bd724ab23'; 
+    var musicUrl = 'https://api.musixmatch.com/ws/1.1/track.get?commontrack_id=' + commontrack_id + '&apikey=' + MUSIC_API_KEY;
+  
+    console.log(musicUrl);
+    fetch(musicUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        
+      });
 };
 
   searchBtn.addEventListener("click", searchInput);
