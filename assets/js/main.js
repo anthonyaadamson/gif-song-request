@@ -1,10 +1,10 @@
 var searchEl = document.querySelector('#searchInput');
 var searchBtn = document.querySelector('#searchBtn');
 var gifEl = document.querySelector('#gif')
-var firstDefintionEl = document.querySelector('#firstdef')
-var secondDefintionEl = document.querySelector('#seconddef')
+var firstDefinitionEl = document.querySelector('#firstdef')
+var secondDefinitionEl = document.querySelector('#seconddef')
 
-var searchResult = 'banana';
+var searchResult = '';
 
 
 function searchInput(event) {
@@ -50,13 +50,13 @@ async function fetchDictionaryApi(searchResult) {
   var data = await response.json();
   console.log(data);
   
-  var wordDefintion = data[0].shortdef[0];
-  if (wordDefintion) {
-    firstDefintionEl.textContent = '1. ' + wordDefintion;
+  var wordDefinition = data[0].shortdef[0];
+  if (wordDefinition) {
+    firstDefinitionEl.textContent = '1. ' + wordDefinition;
   };
-  var secondWordDefintion = data[0].shortdef[1];
-  if (secondWordDefintion) {
-    secondDefintionEl.textContent = '2. ' + secondWordDefintion;
+  var secondWordDefinition = data[0].shortdef[1];
+  if (secondWordDefinition) {
+    secondDefinitionEl.textContent = '2. ' + secondWordDefinition;
   }
 };
 
