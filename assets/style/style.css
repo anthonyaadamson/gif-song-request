@@ -1,11 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    /* color: rgb(255, 209, 153); */
 }
 
 body {
-    background-image: url("../img/simon-noh-0rmby-3OTeI-unsplash.jpg");
+    background-image: url("../img/BackGround.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
