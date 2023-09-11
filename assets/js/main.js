@@ -7,7 +7,6 @@ var secondDefinitionEl = document.querySelector('#seconddef')
 
 var searchResult = '';
 
-
 function searchInput(event) {
     event.preventDefault();
     var searchResult = searchEl.value;
@@ -38,6 +37,7 @@ function renderLastSearch() {
 
 
 
+
 async function fetchGiphyApi(searchResult) {
   var GIPHY_API_KEY = 'XqV9B07FkKPoAffhSG7aPooSHyN7zfCo'
   var giphyUrl = 'https://api.giphy.com/v1/gifs/search?api_key=' + GIPHY_API_KEY + '&q=' + searchResult + '&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips'
@@ -61,11 +61,13 @@ async function fetchDictionaryApi(searchResult) {
   if (wordDefinition) {
     firstDefinitionEl.textContent = '1. ' + wordDefinition;
     localStorage.setItem('definition', wordDefinition);
+    firstDefinitionEl.scrollIntoView({ behavior:'smooth'});
   };
   var secondWordDefinition = data[0].shortdef[1];
   if (secondWordDefinition) {
     secondDefinitionEl.textContent = '2. ' + secondWordDefinition;
     localStorage.setItem('secondDefinition', secondWordDefinition);
+    secondDefinitionEl.scrollIntoView({ behavior:'smooth'});
   }
 };
   searchBtn.addEventListener("click", searchInput);
