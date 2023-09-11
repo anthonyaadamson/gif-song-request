@@ -18,7 +18,7 @@ function searchInput(event) {
 
 if (localStorage){
   var prevBtn = document.createElement('button');
-  prevBtn.textContent = 'Previous';
+  prevBtn.textContent = 'Reload Last Session';
   prevBtnContainer.append(prevBtn);
 };
 
